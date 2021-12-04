@@ -1,5 +1,5 @@
-# Udacimeals
+# Spicy Pepper - webapp
 
-In-class Udacity project to integrate Redux. The udacity branch was specifically used in the React nanodegree program as a dev sandbox, the master branch has been extended as a React webapp to handle greater functionality for weekly meal prep.
+Meal prep calendar webapp built with React, Redux, and Firebase.
 
-Finalized webapp [food.limestripes.com](http://food.limestripes.com)
+Finalized webapp [food.limestripes.com](https://food.limestripes.com)
