@@ -1,6 +1,6 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+import 'firebase/compat/auth'
 
 const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 const API_MSID = process.env.REACT_APP_FIREBASE_SENDER_ID;
@@ -13,9 +13,9 @@ var config = {
     projectId: "foodweekly-ad619",
     storageBucket: "foodweekly-ad619.appspot.com",
     messagingSenderId: API_MSID
-  };
+};
 
-  firebase.initializeApp(config);
-  firebase.firestore().settings({ timestampsInSnapshots: true });
+firebase.initializeApp(config);
+firebase.firestore().settings({ timestampsInSnapshots: true });
 
-  export default firebase;
+export default firebase;

@@ -4,7 +4,8 @@ import { addToMyRecipes, saveRecipeToDB } from '../actions'
 import { Link } from 'react-router-dom'
 //import ImageInput from './ImageInput'
 
-const uuidv4 = require('uuid/v4');
+import { v4 as uuidv4 } from 'uuid';
+//const uuidv4 = require('uuid/v4');
 
 
 class NewRecipe extends Component {

@@ -12,9 +12,10 @@ import thunk from 'redux-thunk'
 import { reduxFirestore, getFirestore } from 'redux-firestore'
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'
 import fbConfig from './utils/config'
+import store from './store'
 
 
-const logger = store => next => action => {
+/*const logger = store => next => action => {
   console.group(action.type)
   console.info('dispatching', action)
   let result = next(action)
@@ -24,9 +25,9 @@ const logger = store => next => action => {
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-let persistedState = loadState();
+let persistedState = loadState();*/
 
-const store = createStore(
+/*const store = createStore(
 	reducer,
   persistedState,
 	composeEnhancers(
@@ -38,7 +39,7 @@ const store = createStore(
 
 store.subscribe( () => {
   saveState(store.getState());
-})
+})*/
 
 
 ReactDOM.render(

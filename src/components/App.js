@@ -22,7 +22,9 @@ import 'react-datepicker/dist/react-datepicker.css'
 import MealOfDay from './MealOfDay'
 import NewUser from './NewUser';
 
-const uuidv1 = require('uuid/v1');
+import { v4 as uuidv4 } from 'uuid';
+
+//const uuidv1 = require('uuid/v1');
 
 
 //NOTES***************************
@@ -47,7 +49,7 @@ class App extends Component {
   )
 
   createNewRecipe = (recipe) => {
-    let recipeId = uuidv1();
+    let recipeId = uuidv4();
     let modRecipe = recipe;
         modRecipe.id = recipeId;
     const newRecipe = this.state.newRecipeObj;
@@ -59,7 +61,7 @@ class App extends Component {
     this.addRecipeToState(currentDay, currentMeal, newRecipe);
   }
   addIdToRecipe = (edamamRecipe) => {
-    let recipeId = uuidv1();
+    let recipeId = uuidv4();
     let modRecipe = edamamRecipe.recipe;
         modRecipe.id = recipeId;
     const {day, meal} = edamamRecipe;

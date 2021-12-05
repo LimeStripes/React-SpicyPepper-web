@@ -13,11 +13,11 @@ render (){
 
 	return (
 		<div id="help-page">
-			<SecondaryNav title="Bare Necessities - Weekly Meal Prep" routeBack="/" />
+			<SecondaryNav title="🌶️ Spicy Pepper - Meal Prep Weekly Calendar" routeBack="/" />
 
 			<div className="container">
 				<ul id="help-list">
-					<li><h5>What's Bare Necessities?</h5>
+					<li><h5>What can you do with this web app?</h5>
 						<p>Simply a web app to help track weekly meals for prepping and cooking.</p>
 						<p>The idea behind it is to make it easier to prepare a menu for the entire week, and to be able to save your recipes so you can spend less time creating shopping lists and figuring out what to eat on a daily basis.</p></li>
 					<li>
