@@ -200,7 +200,7 @@ render(){
 								type="submit"
 								className="btn btn-primary btn-block"
 								disabled={label.length === 0 || steps.length === 0 ? true : false}
-								value="Submit"
+								value="Save and add to my recipes"
 								onClick={(e) => this.addNewRecipe(e)}
 						/>
 					</div>
