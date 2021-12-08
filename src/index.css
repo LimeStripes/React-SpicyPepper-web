@@ -21,7 +21,14 @@ h1,h2,h3,h4,h5,h6 {
 #recipes h4 {
   font-family: 'Kaushan Script', serif;
 }
-
+#logo {
+  font-weight: 700;
+  font-style: italic;
+  color: #2c7009;
+}
+#logo span {
+  color: #ee181a;
+}
 #weekly-meals {
   position: absolute;
   left: 0;
@@ -1229,4 +1236,9 @@ input:-webkit-autofill:active {
 }
 .fineprint {
   font-size: 10px;
+}
+
+#landing-container {
+  background-color: #fff;
+  border-radius: 15px;
 }

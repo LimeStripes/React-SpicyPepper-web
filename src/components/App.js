@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { setFramework, addRecipe, removeFromCalendar } from '../actions'
 import { capitalize } from '../utils/helper'
 import Modal from 'react-modal'
@@ -12,6 +13,7 @@ import { fetchRecipes } from '../utils/api'
 import FoodList from './FoodList'
 import ShoppingList from './ShoppingList'
 import moment from 'moment'
+import LandingPage from './LandingPage'
 import WeeklyMeals from './WeeklyMeals'
 import MyKitchen from './MyKitchen'
 import RecipeDetails from './RecipeDetails'
@@ -142,11 +144,13 @@ class App extends Component {
         {/* FIREBASE VERSION */}
 
         {/* Routing */}
-        <HashRouter>
+        <Router>
           <Switch>
-            <Route exact path="/" render={() =>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/calendar" render={() =>
               <WeeklyMeals openAddFoodModal={this.openFoodModal} shoppingListModal={this.openIngredientsModal} />
             }/>
+
             <Route path="/kitchen" render={() =>
               <MyKitchen />
             }/>
@@ -159,7 +163,7 @@ class App extends Component {
             <Route path="/shopping" render={() => 
               <ShoppingList list={this.generateShoppingList()} />} />
           </Switch>
-        </HashRouter>
+        </Router>
 
 
 
